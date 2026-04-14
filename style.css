@@ -320,4 +320,41 @@ html, body {
   .audience-grid { gap: 10px; }
   .audience-btn { padding: 16px 12px; }
   .message { max-width: 92%; }
+
+  /* Chat screen mobile fixes */
+  #chat-screen {
+    max-width: 100%;
+    width: 100%;
+    box-shadow: none;
+  }
+
+  .chat-header {
+    padding: 12px 14px;
+  }
+
+  .chat-messages {
+    padding: 14px 12px 8px;
+  }
+
+  .chat-input-wrap {
+    padding: 10px 12px 14px;
+  }
+
+  .suggestions {
+    gap: 6px;
+  }
+
+  .suggestion-chip {
+    font-size: 0.75rem;
+    padding: 4px 10px;
+  }
+
+  .input-row {
+    gap: 8px;
+  }
+
+  #user-input {
+    font-size: 0.88rem;
+    padding: 9px 12px;
+  }
 }
