@@ -2,7 +2,7 @@
 // JYO ASSIST BOT — script.js
 // ============================================================
 
-const API_KEY = "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"; // ← paste your Anthropic API key here
+const API_KEY = "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"; // ← paste your Anthropic API key here
 
 // ============================================================
 // KNOWLEDGE BASE
