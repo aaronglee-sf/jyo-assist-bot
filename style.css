@@ -335,11 +335,10 @@ html, body {
 @media (max-width: 480px) {
 
   /* Selector screen */
-  #selector-screen { padding: 20px 16px; }
-  .selector-inner { max-width: 100%; padding: 0; }
-  .headline { font-size: 1.6rem; }
-  .audience-grid { gap: 10px; }
-  .audience-btn { padding: 16px 12px; box-shadow: none; }
+  #selector-screen { padding: 16px; }
+  .selector-inner { max-width: 100%; }
+  .audience-grid { gap: 8px; }
+  .audience-btn { padding: 14px 10px; box-shadow: none; }
 
   /* Chat screen */
   #chat-screen { max-width: 100%; box-shadow: none; }
