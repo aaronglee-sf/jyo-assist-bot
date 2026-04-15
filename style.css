@@ -284,16 +284,14 @@ html, body {
 .suggestion-chip:hover { background: var(--jyo-red); color: white; border-color: var(--jyo-red); }
 
 .input-row {
-  display: flex;
-  gap: 10px;
-  align-items: flex-end;
+  display: grid;
+  grid-template-columns: 1fr 42px;
+  gap: 8px;
+  align-items: end;
   width: 100%;
-  box-sizing: border-box;
 }
 
 #user-input {
-  flex: 1;
-  min-width: 0;
   border: 1.5px solid var(--gray-300);
   border-radius: var(--radius-sm);
   padding: 10px 14px;
