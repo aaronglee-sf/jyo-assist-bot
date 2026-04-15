@@ -350,11 +350,20 @@ html, body {
   }
 
   .input-row {
-    gap: 8px;
-  }
+  gap: 8px;
+  width: 100%;
+  overflow: hidden;
+}
 
-  #user-input {
-    font-size: 0.88rem;
-    padding: 9px 12px;
-  }
+#user-input {
+  min-width: 0;
+  flex: 1;
+  font-size: 0.88rem;
+  padding: 9px 12px;
+}
+
+#send-btn {
+  flex-shrink: 0;
+  width: 42px;
+  min-width: 42px;
 }
