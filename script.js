@@ -459,12 +459,7 @@ const sendBtn = document.getElementById("send-btn");
 // INIT — check for saved key
 // ============================================================
 function init() {
-  const savedKey = localStorage.getItem(STORAGE_KEY);
-  if (savedKey) {
-    showScreen("selector");
-  } else {
-    showScreen("setup");
-  }
+  showScreen("selector");
 }
 
 function showScreen(name) {
