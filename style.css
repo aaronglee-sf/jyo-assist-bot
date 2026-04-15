@@ -318,7 +318,10 @@ html, body {
 
 @media (max-width: 480px) {
   .headline { font-size: 1.6rem; }
-.audience-grid { gap: 10px; width: 100%; grid-template-columns: 1fr 1fr; padding-right: 4px; }
+.audience-grid {
+   grid-template-columns: 1fr;
+   gap: 10px;
+   width: 100%;
 .audience-btn { padding: 16px 12px; box-shadow: none; overflow: hidden; }
 .message { max-width: 92%; }
 
