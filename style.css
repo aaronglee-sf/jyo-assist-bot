@@ -327,43 +327,17 @@ html, body {
     width: 100%;
     box-shadow: none;
   }
+  .chat-header { padding: 12px 14px; }
+  .chat-messages { padding: 14px 12px 8px; }
+  .chat-input-wrap { padding: 10px 12px 14px; }
+  .suggestions { gap: 6px; }
+  .suggestion-chip { font-size: 0.75rem; padding: 4px 10px; }
+  .input-row { gap: 8px; width: 100%; overflow: hidden; }
+  #user-input { min-width: 0; flex: 1; font-size: 0.88rem; padding: 9px 12px; }
+  #send-btn { flex-shrink: 0; width: 42px; min-width: 42px; }
 
-  .chat-header {
-    padding: 12px 14px;
-  }
-
-  .chat-messages {
-    padding: 14px 12px 8px;
-  }
-
-  .chat-input-wrap {
-    padding: 10px 12px 14px;
-  }
-
-  .suggestions {
-    gap: 6px;
-  }
-
-  .suggestion-chip {
-    font-size: 0.75rem;
-    padding: 4px 10px;
-  }
-
-  .input-row {
-  gap: 8px;
-  width: 100%;
-  overflow: hidden;
-}
-
-#user-input {
-  min-width: 0;
-  flex: 1;
-  font-size: 0.88rem;
-  padding: 9px 12px;
-}
-
-#send-btn {
-  flex-shrink: 0;
-  width: 42px;
-  min-width: 42px;
+  /* Selector screen mobile fixes */
+  .selector-inner { width: 100%; max-width: 100%; padding: 0; }
+  .audience-grid { width: 100%; grid-template-columns: 1fr 1fr; }
+  .change-key-btn { display: none; }
 }
