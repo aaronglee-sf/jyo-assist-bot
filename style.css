@@ -264,6 +264,8 @@ html, body {
   border-top: 1px solid var(--gray-100);
   background: var(--white);
   width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .suggestions { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 10px; }
@@ -286,6 +288,7 @@ html, body {
   gap: 10px;
   align-items: flex-end;
   width: 100%;
+  box-sizing: border-box;
 }
 
 #user-input {
