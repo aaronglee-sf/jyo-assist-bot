@@ -318,9 +318,9 @@ html, body {
 
 @media (max-width: 480px) {
   .headline { font-size: 1.6rem; }
-  .audience-grid { gap: 10px; }
-  .audience-btn { padding: 16px 12px; }
-  .message { max-width: 92%; }
+.audience-grid { gap: 10px; width: 100%; grid-template-columns: 1fr 1fr; padding-right: 4px; }
+.audience-btn { padding: 16px 12px; box-shadow: none; overflow: hidden; }
+.message { max-width: 92%; }
 
   /* Chat screen mobile fixes */
   #chat-screen {
@@ -339,9 +339,8 @@ html, body {
 
   /* Selector screen mobile fixes */
   .selector-inner { width: 100%; max-width: 100%; padding: 0; }
-  .audience-grid { width: 100%; grid-template-columns: 1fr 1fr; }
   .change-key-btn { display: none; }
    #selector-screen {
-      padding: 16px;
+      padding: 20px;
    }
 }
