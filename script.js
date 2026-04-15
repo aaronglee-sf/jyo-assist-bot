@@ -381,27 +381,43 @@ function resolveResource(ref) {
 
 function buildKnowledgeBaseText(audience) {
   const audienceData = knowledgeBase.audiences[audience];
+
+  // Define which audiences' resources to include based on current audience
+  const audiencesToInclude = {
+    parent: ["parent"],
+    coach: ["coach", "manager", "parent"],
+    manager: ["manager", "coach", "parent"],
+    leadership: ["parent", "coach", "manager", "leadership"]
+  };
+
   const lines = ["=== SHARED RESOURCES ==="];
+
+  // Shared resources (all audiences)
   Object.values(knowledgeBase.shared).forEach(r => {
     if (r.content) {
-      // Inline content available — include full text
       lines.push(`\n--- ${r.name} ---\n${r.content}\nSource URL: ${r.url}\n`);
     } else {
       lines.push(`- ${r.name}: ${r.description} | URL: ${r.url}`);
     }
   });
-  lines.push(`\n=== ${audience.toUpperCase()} RESOURCES ===`);
-  Object.entries(audienceData.resources).forEach(([key, val]) => {
-    const r = resolveResource(val);
-    if (r && typeof r === "object") {
-      if (r.content) {
-        lines.push(`\n--- ${r.name} ---\n${r.content}\nSource URL: ${r.url}\n`);
-      } else {
-        const urlText = r.url ? r.url : "(URL pending — tell user to check with JYO leadership or visit sanmateojyo.org)";
-        lines.push(`- ${r.name}: ${r.description} | URL: ${urlText}`);
+
+  // Include resources for each permitted audience
+  audiencesToInclude[audience].forEach(a => {
+    const aData = knowledgeBase.audiences[a];
+    lines.push(`\n=== ${a.toUpperCase()} RESOURCES ===`);
+    Object.entries(aData.resources).forEach(([key, val]) => {
+      const r = resolveResource(val);
+      if (r && typeof r === "object") {
+        if (r.content) {
+          lines.push(`\n--- ${r.name} ---\n${r.content}\nSource URL: ${r.url}\n`);
+        } else {
+          const urlText = r.url ? r.url : "(URL pending — tell user to check with JYO leadership or visit sanmateojyo.org)";
+          lines.push(`- ${r.name}: ${r.description} | URL: ${urlText}`);
+        }
       }
-    }
+    });
   });
+
   return lines.join("\n");
 }
 
