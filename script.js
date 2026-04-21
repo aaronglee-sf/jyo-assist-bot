@@ -603,11 +603,9 @@ async function sendMessage() {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({
-        model: "claude-sonnet-4-20250514",
-        max_tokens: 1000,
-        system: buildSystemPrompt(selectedAudience),
-        messages: conversationHistory
+     body: JSON.stringify({
+        messages: conversationHistory,
+        audience: selectedAudience
       })
     });
 
