@@ -450,7 +450,9 @@ ${kbText}
 let selectedAudience = null;
 let conversationHistory = [];
 let isLoading = false;
+let isNewSession = false;
 const STORAGE_KEY = "jyo_assist_api_key";
+const sessionId = crypto.randomUUID();
 
 // ============================================================
 // DOM REFS
@@ -544,6 +546,7 @@ backBtn.addEventListener("click", () => {
 
 function startChat(audience) {
   const audienceData = knowledgeBase.audiences[audience];
+  isNewSession = true;
   showScreen("chat");
 
   const labels = { parent: "👨‍👩‍👧 Parent", coach: "📋 Coach", manager: "📊 Manager", leadership: "🏆 Leadership" };
@@ -606,11 +609,14 @@ async function sendMessage() {
      body: JSON.stringify({
         messages: conversationHistory,
         audience: selectedAudience,
-        knowledgeBaseText: buildKnowledgeBaseText(selectedAudience)
+        knowledgeBaseText: buildKnowledgeBaseText(selectedAudience),
+        sessionId: sessionId,
+        isNewSession: isNewSession
       })
     });
 
     const data = await response.json();
+    isNewSession = false;
     typingEl.remove();
 
     if (data.content && data.content[0]) {
