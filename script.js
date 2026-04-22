@@ -284,7 +284,6 @@ DISCIPLINE:
   audiences: {
     parent: {
       welcomeMessage: "Hi! I'm JYO Assist Bot 👋 I'm here to help you get quick answers about events, schedules, registration, and more. What can I help you with?",
-      suggestions: ["Where are games played?", "How do I register?", "Code of conduct", "Merch & apparel"],
       resources: {
         seasonSchedule: { description: "Full season schedule — game dates, times, and locations", url: null, name: "Season Schedule" },
         jerseyTracker: { description: "Uniform jersey number tracker — look up your player's jersey number", url: null, name: "Jersey Number Tracker" },
@@ -306,7 +305,6 @@ Keep your tone warm and welcoming — many parents are new to the league.`
 
     coach: {
       welcomeMessage: "Hey Coach! 👋 I'm JYO Assist Bot. Ask me anything about gym access, equipment, league rules, jamborees, or resources for your team.",
-      suggestions: ["Gym access & keys", "Equipment location", "Jamboree sign-ups", "Coach apparel"],
       resources: {
         newCoachesPrimer: "shared.newCoachesPrimer",
         teamContacts: { description: "Team contact information for all coaches", url: null, name: "Team Contact List" },
@@ -328,7 +326,6 @@ Keep your tone collegial and practical — coaches are busy volunteers.`
 
     manager: {
       welcomeMessage: "Hi Manager! 📊 I'm JYO Assist Bot. I can help with practice schedules, game day setup, scoring, team funds, and more.",
-      suggestions: ["Practice schedule", "NYBA score report", "Team building funds", "Game day setup"],
       resources: {
         managerHandbook: "shared.managerHandbook",
         gameDayGuide: "shared.gameDayGuide",
@@ -348,7 +345,6 @@ Keep your tone efficient and direct — managers are organized, detail-oriented 
 
     leadership: {
       welcomeMessage: "Welcome! 🏆 I'm JYO Assist Bot. I can help with meeting minutes, conduct issues, survey coordination, volunteer structure, and league resources.",
-      suggestions: ["NYBA conduct issues", "Survey links", "Volunteer structure", "Season learnings"],
       resources: {
         seasonLearnings: { description: "Season learnings document — feedback, notes, and improvements across the season", url: "https://docs.google.com/spreadsheets/d/19pGTvU6UINOXZyIRVJwPm4tSqBiZkRqftBkz4j7vrQo/edit?usp=sharing", name: "Season Learnings Doc" },
         meetingMinutes: { description: "JYO board meeting minutes", url: null, name: "Meeting Minutes" },
@@ -427,6 +423,68 @@ function buildSystemPrompt(audience) {
   return `You are JYO Assist Bot, a helpful assistant for San Mateo JYO (Japanese Youth Organization), a recreational youth basketball league for grades 1–8 in San Mateo, CA.
 
 ${audienceData.context}
+
+// ============================================================
+// DYNAMIC SUGGESTION CHIPS
+// ============================================================
+function buildSuggestions(audience) {
+  // Top questions per audience — grounded in knowledge base content
+  const topQuestions = {
+    parent: [
+      "What's the code of conduct?",
+      "Where can I buy JYO merch?",
+      "How does playing time work?",
+      "Where do I find the practice schedule?"
+    ],
+    coach: [
+      "How do I run an effective practice?",
+      "What are the NYBA game rules?",
+      "How do I handle guest players?",
+      "What's the jamboree schedule?"
+    ],
+    manager: [
+      "How do I set up for a home game?",
+      "How do I pay the referees?",
+      "How do I report the final score?",
+      "How do team building funds work?"
+    ],
+    leadership: [
+      "How do I handle a conduct issue?",
+      "What's the guest player policy?",
+      "Where are the meeting minutes?",
+      "How do I coordinate surveys?"
+    ]
+  };
+
+  // Registry-sourced chips — pull names of docs with live URLs for this audience
+  const audiencesToInclude = {
+    parent:     ["parent", "all"],
+    coach:      ["coach", "manager", "parent", "all"],
+    manager:    ["manager", "coach", "parent", "all"],
+    leadership: ["parent", "coach", "manager", "leadership", "all"]
+  };
+  const permitted = audiencesToInclude[audience] || [audience];
+
+  // Pull resource names from knowledge base that have real URLs
+  const kbDocChips = [];
+  permitted.forEach(a => {
+    const source = a === "parent" || a === "coach" || a === "manager" || a === "leadership"
+      ? knowledgeBase.audiences[a]?.resources
+      : null;
+    if (!source) return;
+    Object.values(source).forEach(val => {
+      const r = resolveResource(val);
+      if (r && typeof r === "object" && r.url && r.name && kbDocChips.length < 2) {
+        const chip = `Tell me about: ${r.name}`;
+        if (!kbDocChips.includes(chip)) kbDocChips.push(chip);
+      }
+    });
+  });
+
+  // Combine: 3 top questions + up to 2 doc chips, max 4 total
+  const combined = [...topQuestions[audience].slice(0, 3), ...kbDocChips.slice(0, 1)];
+  return combined.slice(0, 4);
+}
 
 === KNOWLEDGE BASE ===
 ${kbText}
@@ -554,7 +612,7 @@ function startChat(audience) {
   welcomeMsg.textContent = audienceData.welcomeMessage;
 
   suggestionsEl.innerHTML = "";
-  audienceData.suggestions.forEach(s => {
+  buildSuggestions(audience).forEach(s => {
     const chip = document.createElement("button");
     chip.className = "suggestion-chip";
     chip.textContent = s;
