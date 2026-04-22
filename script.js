@@ -605,7 +605,8 @@ async function sendMessage() {
       },
      body: JSON.stringify({
         messages: conversationHistory,
-        audience: selectedAudience
+        audience: selectedAudience,
+        knowledgeBaseText: buildKnowledgeBaseText(selectedAudience)
       })
     });
 
