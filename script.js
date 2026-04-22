@@ -650,7 +650,11 @@ function appendMessage(text, type) {
 
 function formatBotMessage(text) {
   let html = text.replace(/\[([^\]]+)\]\((https?:\/\/[^\)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
+  const hasSourceLink = /(📄 Source:)/.test(text);
   html = html.replace(/(📄 Source:.*)/g, '<div class="source-line">$1</div>');
+  if (hasSourceLink) {
+    html += '<div class="permissions-notice">If you\'re unable to open a linked document due to a permissions error, please contact <a href="mailto:secretary@sanmateojyo.org">secretary@sanmateojyo.org</a> for access.</div>';
+  }
   html = html.replace(/\n/g, "<br/>");
   return html;
 }
