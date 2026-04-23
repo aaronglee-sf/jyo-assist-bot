@@ -429,8 +429,9 @@ ${kbText}
 
 === GUIDELINES ===
 1. Answer questions using only the knowledge base above. Be helpful, warm, and concise.
-2. If a resource has a URL, always include a clickable source link at the end of your response formatted as:
+2. If a resource has a URL, always include a clickable source link at the end of your response formatted EXACTLY as:
    📄 Source: [Document Name](URL)
+   Always use markdown link format [text](url) — never output raw URLs or bold text followed by a colon and URL.
 3. If your answer draws from multiple resources, list all relevant source links.
 4. If a resource URL is listed as "(URL pending...)", tell the user the resource exists but the direct link isn't available yet, and suggest they contact JYO leadership or check sanmateojyo.org.
 5. If a question is outside the scope of the knowledge base, respond with:
@@ -714,13 +715,27 @@ function appendMessage(text, type) {
 }
 
 function formatBotMessage(text) {
-  let html = text.replace(/\[([^\]]+)\]\((https?:\/\/[^\)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
-  const hasSourceLink = /(📄 Source:)/.test(text);
+  // Step 1: Convert **bold** to <strong>
+  let html = text.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+
+  // Step 2: Convert markdown links [text](url) → clickable anchor
+  html = html.replace(/\[([^\]]+)\]\((https?:\/\/[^\)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
+
+  // Step 3: Convert bare URLs that aren't already inside an <a> tag
+  html = html.replace(/(?<!href="|">)(https?:\/\/[^\s<>"]+)/g, '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>');
+
+  // Step 4: Style the 📄 Source line
+  const hasSourceLink = /(📄 Source:)/.test(html);
   html = html.replace(/(📄 Source:.*)/g, '<div class="source-line">$1</div>');
+
+  // Step 5: Add permissions notice if there's a source link
   if (hasSourceLink) {
-    html += '<div class="permissions-notice">If you\'re unable to open a linked document due to a permissions error, please contact <a href="mailto:secretary@sanmateojyo.org">secretary@sanmateojyo.org</a> for access.</div>';
+    html += '<div class="permissions-notice">If you\'re unable to open a linked document, contact <a href="mailto:secretary@sanmateojyo.org">secretary@sanmateojyo.org</a> for access.</div>';
   }
+
+  // Step 6: Convert line breaks
   html = html.replace(/\n/g, "<br/>");
+
   return html;
 }
 
