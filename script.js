@@ -498,7 +498,7 @@ Keep your tone efficient and direct — managers are organized, detail-oriented 
     },
 
     leadership: {
-      welcomeMessage: "Welcome! 🏆 I'm JYO Assist Bot. I can help with meeting minutes, conduct issues, survey coordination, volunteer structure, and league resources.",
+      welcomeMessage: "Welcome! 🧭 I'm JYO Assist Bot. I can help with meeting minutes, conduct issues, survey coordination, volunteer structure, and league resources.",
       resources: {
         seasonLearnings:    { description: "Season learnings document — feedback, notes, and improvements across the season", url: "https://docs.google.com/spreadsheets/d/19pGTvU6UINOXZyIRVJwPm4tSqBiZkRqftBkz4j7vrQo/edit?usp=sharing", name: "Season Learnings Doc" },
         meetingMinutes:     { description: "JYO board meeting minutes", url: null, name: "Meeting Minutes" },
@@ -752,7 +752,7 @@ function startChat(audience) {
   isNewSession = true;
   showScreen("chat");
 
-  const labels = { parent: "👨‍👩‍👧 Parent", coach: "📋 Coach", manager: "📊 Manager", leadership: "🏆 Leadership" };
+  const labels = { parent: "👨‍👩‍👧 Parent", coach: "📋 Coach", manager: "📊 Manager", leadership: "🧭 Leadership" };
   audienceBadge.textContent = labels[audience] || audience;
   welcomeMsg.textContent = audienceData.welcomeMessage;
 
