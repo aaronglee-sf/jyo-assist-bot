@@ -605,9 +605,9 @@ ${kbText}
 
 === GUIDELINES ===
 1. Answer questions using only the knowledge base above. Be helpful, warm, and concise.
-2. If a resource has a URL, always include a clickable source link at the end of your response formatted EXACTLY as:
+2. ALWAYS include a clickable source link at the end of EVERY response, formatted EXACTLY as:
    📄 Source: [Document Name](URL)
-   Always use markdown link format [text](url) — never output raw URLs or bold text followed by a colon and URL.
+   If your answer draws from a named document in the knowledge base, link to it. If multiple documents apply, list all of them. Never omit the source line — even if you're answering from inline content, include the source document name and URL.
 3. If your answer draws from multiple resources, list all relevant source links.
 4. If a resource URL is listed as "(URL pending...)", tell the user the resource exists but the direct link isn't available yet, and suggest they contact JYO leadership or check sanmateojyo.org.
 5. If a question is outside the scope of the knowledge base, respond with:
