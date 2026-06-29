@@ -353,22 +353,22 @@ SCOREBOOK INSTRUCTIONS:
 
 - Report final score to NYBA that evening`
     },
-    newCoachesPrimer: {
-      name: "JYO New Coaches Primer",
-      url: "https://drive.google.com/file/d/1iuRMlnJNyHmn9p7AQayvYr4-eTaovI0S/view?usp=sharing",
-      content: `JYO New Coaches Primer (Updated August 2025)
+  JYOCoachesPrimer: {
+      name: "JYO Coaches Primer",
+      url: "https://docs.google.com/document/d/1o1xQVRm_ywSSZoaQuZ95Rl5CW9PSmwM2ExOzE9V5J4A/edit",
+      content: `JYO Coaches Primer (Updated May 2026)
 
 HIGH LEVEL GOALS:
 
-- Coaching should reflect JYO values — recreational, not strictly competitive
+- Coaching should reflect the values of JYO
+
+- Youth basketball is primarily for instructional purposes — not strictly competitive
 
 - Help kids fall in love with the game
 
-- All participants must follow the JYO Code of Conduct
+ROLES AND RESPONSIBILITIES:
 
-ROLES:
-
-- Head Coach: instructs players, sets culture for team and parents
+- Head Coach: instructs players, sets culture for team and parents, makes final decisions in the best interest of the team
 
 - Manager and Assistant Coaches: support the Head Coach
 
@@ -382,77 +382,101 @@ SETTING EXPECTATIONS EARLY (with players):
 
 - Explain disciplinary actions upfront
 
+- All participants must follow the JYO Code of Conduct
+
 SETTING EXPECTATIONS EARLY (with parents):
 
 - Describe your coaching background and vision for the team
 
-- Explain expectations: show up to practice, notify when absent, be present (especially for younger teams — practice is NOT childcare drop-off)
+- Explain expectations: show up to practice, notify when absent, be present at practice
 
-- Explain how player discipline will be handled
+- Parents should RSVP for practice ~3 days in advance — this helps with planning and accountability
 
-- Make clear that coaching staff makes final decisions on messages and approaches
+- It is MANDATORY that a parent attends practice if: (1) the player is on an Instructional Level (3rd grade or younger) team, or (2) the coach deems it necessary due to previous behavioral issues
 
-- Send expectations in written form (email) — not all parents may be physically present
+- Practice is NOT childcare drop-off for Instructional Level teams
+
+- Talk about how player discipline will be handled
+
+- Coaching staff makes final decisions on messages and approaches to prevent confusion
+
+- Send expectations in written form (email) — not all parents may be present or attentive at the meeting
 
 PRACTICE PLANNING:
 
 - Come prepared with a Practice Plan for every session
 
-- Consider the team's skill and ability level
+- Consider the team's talent, skill, and ability to learn
 
-- Find drills from: YouTube, your playing experience, other coaches
+- Find drills from: YouTube, your playing experience, other coaches, or Google Drive: JYO Share > Basketball > Coaching Material
 
-- Use a spreadsheet to schedule drills with expected clock times
+- Review the Points of Emphasis for each drill in your practice plan
+
+- Use a spreadsheet to schedule drills with expected clock times (also useful as a historical reference)
+
+- Estimate time for instruction, drills, and transitions between drills
 
 - Maximize time players are active — minimize standing/waiting
 
-- Reduce transition time: reuse drill setups, use drill progressions
+- Reduce transition time: reuse drill setups, use drill progressions, run drills that involve both offense and defense
 
-- Prioritize high-importance drills earlier in practice
-
-- Always include scrimmages or small-sided games at the end
-
-- Add water breaks (more frequent for younger teams)
+- Prioritize high-importance drills earlier in practice in case you need to cut some
 
 - Plan for a little more than you can cover — extra time = longer scrimmage
 
+- Always include scrimmages or small-sided games at the end
+
+- Add water breaks (more frequent for Instructional Teams)
+
+- Consider utilizing parents during practice
+
+- Try to make practice fun, especially for Instructional Teams — kids who enjoy practice are more likely to attend and practice on their own
+
 PRACTICE EXECUTION:
 
-- Keep track of time and your practice plan schedule
+- Keep track of time and where you are in your Practice Plan schedule
 
-- For younger teams: use attention cues (e.g. "1-2-3 eyes on me!")
+- For Instructional Teams: use attention cues familiar from school (e.g. "1-2-3 eyes on me!" → kids respond "1-2 eyes on you!")
 
 - Position players to minimize distractions during instruction
 
 - Physically, visually, AND verbally demonstrate every drill
 
-- Don't over-correct — coaches constantly stopping play causes kids to tune out
+- If players don't get it after the allotted time, move on — you may need to rethink your teaching approach or consider if the lesson is beyond their current ability
+
+- Don't over-correct — coaches constantly stopping play causes kids to tune out; prioritize which mistakes to address
+
+- Use scrimmages to reinforce skills taught that day — don't expect players to perform skills you haven't taught yet; scrimmages also validate drill effectiveness
 
 - Prioritize celebrating effort and correct decisions over results
 
 - Provide truthful and specific feedback; reframe mistakes as learning opportunities
 
-- If a child is disruptive: have them sit on sideline with their parent until ready to rejoin
+- Keep encouraging players — let them know it's OK to fail when trying a new skill
 
-- Use scrimmages to reinforce skills taught that day — don't expect skills you haven't taught yet
+- Keep practice fun, especially for younger teams
 
-DISCIPLINE:
+HANDLING PLAYERS WITH BEHAVIORAL PROBLEMS:
 
-- Address issues early to prevent escalation
+- Address issues early to prevent escalation ("nip it in the bud")
 
-- For younger teams: disruptive child sits with their parent on sideline
+- For Instructional Teams: if a child is disruptive, have them sit on the sideline with their parent until ready to rejoin; have the child explain to the parent what they did wrong
 
-- Have the child explain to the parent what they did wrong`
-    },
-    practiceSchedules: {
-      description: "Practice schedules spreadsheet for all teams",
-      url: "https://docs.google.com/spreadsheets/d/1zs4oW1Rl7Os8NPImDUmIRCARbFraOEO5urh8gHzaXAA/edit?usp=sharing",
-      name: "Practice Schedules"
-    },
-    website: {
-      description: "JYO official website — sanmateojyo.org",
-      url: "https://sanmateojyo.org",
-      name: "JYO Website"
+- Make it mandatory that the parent attends practice for players with consistent behavioral issues
+
+- For repeated or excessive issues, the coach may ask the player to leave practice — follow up with a parent phone call to explain the situation, hear the player's side, set expectations, and agree on a solution
+
+- For consistent issues, work with parents to understand the problem and explore solutions — but note there are limits to accommodation given the rest of the team
+
+- Escalate to Commissioner and, if necessary, Athletic Director
+
+ADDITIONAL COACHING RESOURCES:
+
+- Instructional Level: Google Drive: JYO Share > Basketball > Coaching Material > Instructional Level (includes Instructional Coaching Manual, Instructional Roadmap, and Instr Level BBall Notes)
+
+- All Coaching Levels: Google Drive: JYO Share > Basketball > Coaching Material (drills, plays, practice plan template, game substitution template, clinic materials, and more)
+
+- JYO Slack: "20YY-bball-nerds" channel — passive posting of basketball material for coaching enthusiasts; previous years' channels are archived`
     },
     merchStore: {
       description: "JYO merchandise and apparel store — ordering, sizing, deadlines, pickup",
