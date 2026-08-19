@@ -973,14 +973,14 @@ function formatBotMessage(text) {
   html = html.replace(/(?<!href="|">)(https?:\/\/[^\s<>"]+)/g,
     '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>');
 
-  // Step 4: Style the 📄 Source line
-  const hasSourceLink = /(📄 Source:)/.test(html);
+ // Step 4: Style the 📄 Source line (legacy format, if present)
   html = html.replace(/(📄 Source:.*)/g, '<div class="source-line">$1</div>');
 
-  // Step 5: Add permissions notice if there's a source link
+  // Step 5: Add permissions notice if there's ANY linked document —
+  // either the 📄 icon (however Claude phrases the surrounding text)
+  // or a rendered <a href> link from Steps 2/3 above.
+  const hasSourceLink = /📄/.test(html) || /<a\s+href=/.test(html);
   if (hasSourceLink) {
-    html += '<div class="permissions-notice">If you\'re unable to open a linked document, contact <a href="mailto:secretary@sanmateojyo.org">secretary@sanmateojyo.org</a> for access.</div>';
-  }
 
   // Step 6: Convert line breaks
   html = html.replace(/\n/g, "<br/>");
