@@ -12,7 +12,8 @@ const knowledgeBase = {
   shared: {
     codeOfConduct: window.JYO_KB.codeOfConduct,
     merchStore: window.JYO_KB.merchStore,
-    managerHandbook: window.JYO_KB.managerHandbook
+    managerHandbook: window.JYO_KB.managerHandbook,
+    keyContacts: window.JYO_KB.keyContacts
   },
 
   audiences: {
@@ -22,7 +23,7 @@ const knowledgeBase = {
         seasonSchedule:   { description: "Full season schedule — game dates, times, and locations", url: null, name: "Season Schedule" },
         jerseyTracker:    { description: "Uniform jersey number tracker — look up your player's jersey number", url: null, name: "Jersey Number Tracker" },
         eventInfo:        { description: "Game and event info including gym locations — available in TeamSnap", url: null, name: "Event & Game Info (TeamSnap)" },
-        contactInfo:      { description: "JYO org contact info — president, commissioners, and key roles", url: null, name: "JYO Contact Info" },
+        keyContacts:      "shared.keyContacts",
         specialEvents:    { description: "Special events like Warriors Night (PWTPP) — waivers, logistics, late arrival", url: null, name: "Special Event Info" },
         waiverForms:      { description: "Waiver forms for special events", url: null, name: "Waiver Forms" },
         codeOfConduct:    "shared.codeOfConduct",
@@ -41,7 +42,7 @@ Keep your tone warm and welcoming — many parents are new to the league.`
       welcomeMessage: "Hey Coach! 👋 I'm JYO Assist Bot. Ask me anything about gym access, equipment, league rules, jamborees, or resources for your team.",
       resources: {
         newCoachesPrimer:     "shared.newCoachesPrimer",
-        teamContacts:         { description: "Team contact information for all coaches", url: null, name: "Team Contact List" },
+        keyContacts:          "shared.keyContacts",
         nybaRules:            { description: "NYBA league game rules", url: null, name: "NYBA League Game Rules" },
         leagueScheduleRosters:{ description: "League schedule and rosters", url: null, name: "League Schedule & Rosters" },
         scrimmageWaiver:      { description: "Scrimmage waiver forms — required for hosting non-JYO teams at practices", url: null, name: "Scrimmage Waiver Form" },
@@ -68,6 +69,7 @@ Keep your tone collegial and practical — coaches are busy volunteers.`
         jerseyTracker:    { description: "Uniform jersey number tracker", url: null, name: "Jersey Number Tracker" },
         nybaScoreReport:  { description: "NYBA score report — how to submit game scores after each game", url: null, name: "NYBA Score Report" },
         teamBuildingFunds:{ description: "Team building funds — each team is eligible for $600. Instructions on eligibility, how to request, and deadlines.", url: null, name: "Team Building Funds Instructions" },
+        keyContacts:      "shared.keyContacts",
         website:          "shared.website"
       },
       context: `You are helping a JYO MANAGER. Managers handle team logistics, score reporting, and game day operations.
@@ -82,7 +84,7 @@ Keep your tone efficient and direct — managers are organized, detail-oriented 
       resources: {
         seasonLearnings:    { description: "Season learnings document — feedback, notes, and improvements across the season", url: "https://docs.google.com/spreadsheets/d/19pGTvU6UINOXZyIRVJwPm4tSqBiZkRqftBkz4j7vrQo/edit?usp=sharing", name: "Season Learnings Doc" },
         meetingMinutes:     { description: "JYO board meeting minutes", url: null, name: "Meeting Minutes" },
-        contactList:        { description: "Full JYO leadership and staff contact list", url: null, name: "Contact List" },
+        keyContacts:        "shared.keyContacts",
         parentSurvey:       { description: "Parent survey — links and coordination", url: null, name: "Parent Survey" },
         coachManagerSurvey: { description: "Coach and manager feedback survey", url: null, name: "Coach/Manager Survey" },
         codeOfConduct:      "shared.codeOfConduct",
