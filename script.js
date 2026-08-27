@@ -23,7 +23,6 @@ const knowledgeBase = {
         seasonSchedule:   { description: "Full season schedule — game dates, times, and locations", url: null, name: "Season Schedule" },
         jerseyTracker:    { description: "Uniform jersey number tracker — look up your player's jersey number", url: null, name: "Jersey Number Tracker" },
         eventInfo:        { description: "Game and event info including gym locations — available in TeamSnap", url: null, name: "Event & Game Info (TeamSnap)" },
-        keyContacts:      "shared.keyContacts",
         specialEvents:    { description: "Special events like Warriors Night (PWTPP) — waivers, logistics, late arrival", url: null, name: "Special Event Info" },
         waiverForms:      { description: "Waiver forms for special events", url: null, name: "Waiver Forms" },
         codeOfConduct:    "shared.codeOfConduct",
