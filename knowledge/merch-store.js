@@ -1,10 +1,10 @@
 // ============================================================
 // JYO KNOWLEDGE BASE — JYO Merch Store
-// Source: https://store.nakoshi.com/jyo/shop/home
+// Source: Document Registry sheet (URL not hardcoded — pulled dynamically)
 // ============================================================
 window.JYO_KB = window.JYO_KB || {};
 window.JYO_KB.merchStore = {
-      description: "JYO merchandise and apparel store — ordering, sizing, deadlines, pickup",
-      url: "https://store.nakoshi.com/jyo/shop/home",
+      description: "JYO merchandise and apparel store — ordering, sizing, deadlines",
+      url: null,
       name: "JYO Merch Store"
 };
