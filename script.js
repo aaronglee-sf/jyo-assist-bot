@@ -409,6 +409,7 @@ async function sendMessage() {
     const reader = response.body.getReader();
     const decoder = new TextDecoder();
     let fullText = "";
+    let sseBuffer = "";          // holds any incomplete SSE line between reads
     let botBubble = null;        // created on first text chunk
     let firstChunk = true;
 
@@ -416,10 +417,17 @@ async function sendMessage() {
       const { done, value } = await reader.read();
       if (done) break;
 
-      const chunk = decoder.decode(value, { stream: true });
+      // Network reads don't align with SSE line boundaries (especially on
+      // mobile/cellular, where reads are smaller and more fragmented), so a
+      // "data: {...}" line can arrive split across two reads. Buffer any
+      // trailing partial line instead of parsing it prematurely — otherwise
+      // it fails JSON.parse and gets silently dropped, corrupting the output.
+      sseBuffer += decoder.decode(value, { stream: true });
+      const lines = sseBuffer.split("\n");
+      sseBuffer = lines.pop(); // last element may be incomplete — keep for next read
 
       // Parse SSE lines — each looks like: "data: {...}"
-      for (const line of chunk.split("\n")) {
+      for (const line of lines) {
         if (!line.startsWith("data: ")) continue;
         const raw = line.slice(6).trim();
         if (raw === "[DONE]") continue;
