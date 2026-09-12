@@ -13,7 +13,8 @@ const knowledgeBase = {
     codeOfConduct: window.JYO_KB.codeOfConduct,
     merchStore: window.JYO_KB.merchStore,
     managerHandbook: window.JYO_KB.managerHandbook,
-    keyContacts: window.JYO_KB.keyContacts
+    keyContacts: window.JYO_KB.keyContacts,
+    gymAccess: window.JYO_KB.gymAccess
   },
 
   audiences: {
@@ -42,6 +43,7 @@ Keep your tone warm and welcoming — many parents are new to the league.`
       resources: {
         newCoachesPrimer:     "shared.newCoachesPrimer",
         keyContacts:          "shared.keyContacts",
+        gymAccess:            "shared.gymAccess",
         nybaRules:            { description: "NYBA league game rules", url: null, name: "NYBA League Game Rules" },
         leagueScheduleRosters:{ description: "League schedule and rosters", url: null, name: "League Schedule & Rosters" },
         scrimmageWaiver:      { description: "Scrimmage waiver forms — required for hosting non-JYO teams at practices", url: null, name: "Scrimmage Waiver Form" },
@@ -52,7 +54,7 @@ Keep your tone warm and welcoming — many parents are new to the league.`
         merch:                "shared.merchStore"
       },
       context: `You are helping a JYO COACH. Coaches are volunteers who lead teams.
-They commonly ask about: gym access and which schools require keys, equipment location (basketballs, scoreboard, rim extenders),
+They commonly ask about: gym access and which schools/gyms require keys or have a locked-door contact (see Gym Access resource), equipment location (basketballs, scoreboard, rim extenders),
 NYBA game rules, league schedule and rosters, scrimmage waiver forms, jamboree sign-ups (CYS, Taisho, Associates, etc.),
 Teammate of the Month nominations, and coach apparel.
 Keep your tone collegial and practical — coaches are busy volunteers.`
@@ -69,11 +71,12 @@ Keep your tone collegial and practical — coaches are busy volunteers.`
         nybaScoreReport:  { description: "NYBA score report — how to submit game scores after each game", url: null, name: "NYBA Score Report" },
         teamBuildingFunds:{ description: "Team building funds — each team is eligible for $600. Instructions on eligibility, how to request, and deadlines.", url: null, name: "Team Building Funds Instructions" },
         keyContacts:      "shared.keyContacts",
+        gymAccess:        "shared.gymAccess",
         website:          "shared.website"
       },
       context: `You are helping a JYO MANAGER. Managers handle team logistics, score reporting, and game day operations.
 They commonly ask about: practice schedules (most-referenced doc), game day setup, available gym time (releasing or claiming slots),
-gym keys and access, NYBA score reporting, jamboree and tournament tracking, jersey number tracking,
+gym keys and access — including locked-gym situations at San Mateo High School gyms, Brewer, and Crocker (see Gym Access resource), NYBA score reporting, jamboree and tournament tracking, jersey number tracking,
 team building funds ($600 per team — eligibility, how to request, deadline), and coach gift guidance.
 Keep your tone efficient and direct — managers are organized, detail-oriented volunteers.`
     },
