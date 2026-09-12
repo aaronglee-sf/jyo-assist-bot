@@ -9,15 +9,15 @@ window.JYO_KB.keyContacts = {
       content: `San Mateo JYO — Key Contacts
 
 BOARD & LEADERSHIP
-- President: Aaron Lee — 415.519.7196 — president@sanmateojyo.org
-- Vice President: Jaclyn Hiura — 310.402.1326
-- Athletic Director: Alan Lee — 408.348.3564 — commission@sanmateojyo.org
-- Boys Commissioner, Instructional (Gr 1–3): Andrew Chia — 650.745.6859 — commission@sanmateojyo.org
-- Boys Commissioner, League (Gr 4–8): Frank Hsu — 408.506.4266 — commission@sanmateojyo.org
-- Girls Commissioner, Instructional (Gr 1–3): Wes Culver — 415.601.8998 — commission@sanmateojyo.org
-- Girls Commissioner, League (Gr 4–8): John Dao — 310.562.6998 — commission@sanmateojyo.org
-- Kinder Commissioner: Wes Culver — 415.601.8998 — commission@sanmateojyo.org
-- Gym Coordinator: Lynn Tom — 415.317.1652
+- President: Aaron Lee — 415-519-7196 — president@sanmateojyo.org
+- Vice President: Jaclyn Hiura — 310-402-1326
+- Athletic Director: Alan Lee — 408-348-3564 — commission@sanmateojyo.org
+- Boys Commissioner, Instructional (Gr 1–3): Andrew Chia — 650-745-6859 — commission@sanmateojyo.org
+- Boys Commissioner, League (Gr 4–8): Frank Hsu — 408-506-4266 — commission@sanmateojyo.org
+- Girls Commissioner, Instructional (Gr 1–3): Wes Culver — 415-601-8998 — commission@sanmateojyo.org
+- Girls Commissioner, League (Gr 4–8): John Dao — 310-562-6998 — commission@sanmateojyo.org
+- Kinder Commissioner: Wes Culver — 415-601-8998 — commission@sanmateojyo.org
+- Gym Coordinator: Lynn Tom — 415-317-1652
 - Secretary: Cindy Tam — secretary@sanmateojyo.org
 
 VOLUNTEER & TEAM SUPPORT
