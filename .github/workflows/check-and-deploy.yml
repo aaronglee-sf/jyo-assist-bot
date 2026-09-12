@@ -38,6 +38,11 @@ jobs:
       - name: Check out repo
         uses: actions/checkout@v4
 
+      - name: Stamp cache-busting version into index.html
+        run: |
+          SHORT_SHA=$(echo "${{ github.sha }}" | cut -c1-7)
+          sed -i "s/__CACHEBUST__/$SHORT_SHA/g" index.html
+
       - name: Upload site as Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
