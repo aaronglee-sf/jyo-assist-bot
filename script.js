@@ -67,7 +67,6 @@ Keep your tone collegial and practical — coaches are busy volunteers.`
         managerHandbook:  "shared.managerHandbook",
         gameDayGuide:     "shared.gameDayGuide",
         jamboreeTracker:  { description: "Jamboree and tournament tracker — sign-ups and logistics", url: "https://docs.google.com/spreadsheets/d/1HKHfQGDzUdVyLYW8mD60iDEA-JMzETH6eL1XBhQgFms/edit?usp=drive_link", name: "Jamboree & Tournament Tracker" },
-        practiceSchedule: { description: "Practice schedule spreadsheet — most-referenced doc, shows all team practice times and gym assignments", url: "https://docs.google.com/spreadsheets/d/1zs4oW1Rl7Os8NPImDUmIRCARbFraOEO5urh8gHzaXAA/edit?usp=sharing", name: "Practice Schedule Spreadsheet" },
         jerseyTracker:    { description: "Uniform jersey number tracker", url: null, name: "Jersey Number Tracker" },
         nybaScoreReport:  { description: "NYBA score report — how to submit game scores after each game", url: null, name: "NYBA Score Report" },
         teamBuildingFunds:{ description: "Team building funds — each team is eligible for $600. Instructions on eligibility, how to request, and deadlines.", url: null, name: "Team Building Funds Instructions" },
