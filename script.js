@@ -42,7 +42,7 @@ Keep your tone warm and welcoming — many parents are new to the league.`
     coach: {
       welcomeMessage: "Hey Coach! 👋 I'm JYO Assist Bot. Ask me anything about gym access, equipment, league rules, jamborees, or resources for your team.",
       resources: {
-        newCoachesPrimer:     "shared.newCoachesPrimer",
+        coachesPrimer:        "shared.coachesPrimer",
         keyContacts:          "shared.keyContacts",
         gymAccess:            "shared.gymAccess",
         nybaRules:            { description: "NYBA league game rules", url: null, name: "NYBA League Game Rules" },
