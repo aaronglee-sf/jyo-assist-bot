@@ -11,6 +11,7 @@
 const knowledgeBase = {
   shared: {
     codeOfConduct: window.JYO_KB.codeOfConduct,
+    coachesPrimer: window.JYO_KB.coachesPrimer,
     merchStore: window.JYO_KB.merchStore,
     managerHandbook: window.JYO_KB.managerHandbook,
     keyContacts: window.JYO_KB.keyContacts,
