@@ -69,7 +69,6 @@ Keep your tone collegial and practical — coaches are busy volunteers.`
         jamboreeTracker:  { description: "Jamboree and tournament tracker — sign-ups and logistics", url: "https://docs.google.com/spreadsheets/d/1HKHfQGDzUdVyLYW8mD60iDEA-JMzETH6eL1XBhQgFms/edit?usp=drive_link", name: "Jamboree & Tournament Tracker" },
         jerseyTracker:    { description: "Uniform jersey number tracker", url: null, name: "Jersey Number Tracker" },
         nybaScoreReport:  { description: "NYBA score report — how to submit game scores after each game", url: null, name: "NYBA Score Report" },
-        teamBuildingFunds:{ description: "Team building funds — each team is eligible for $600. Instructions on eligibility, how to request, and deadlines.", url: null, name: "Team Building Funds Instructions" },
         keyContacts:      "shared.keyContacts",
         gymAccess:        "shared.gymAccess",
         website:          "shared.website"
@@ -77,7 +76,8 @@ Keep your tone collegial and practical — coaches are busy volunteers.`
       context: `You are helping a JYO MANAGER. Managers handle team logistics, score reporting, and game day operations.
 They commonly ask about: practice schedules (most-referenced doc), game day setup, available gym time (releasing or claiming slots),
 gym keys and access — including locked-gym situations at San Mateo High School gyms, Brewer, and Crocker (see Gym Access resource), NYBA score reporting, jamboree and tournament tracking, jersey number tracking,
-team building funds ($600 per team — eligibility, how to request, deadline), and coach gift guidance.
+and coach gift guidance.
+IMPORTANT: JYO is NOT offering team building funds this season. If asked, say so clearly and do not mention any dollar amount. Direct follow-up questions to the TMSL at teammanagersupport@sanmateojyo.org.
 Keep your tone efficient and direct — managers are organized, detail-oriented volunteers.`
     },
 
@@ -196,7 +196,7 @@ function buildSuggestions(audience) {
       "How do I set up for a home game?",
       "How do I pay the referees?",
       "How do I report the final score?",
-      "How do team building funds work?"
+      "How do I log volunteer hours?"
     ],
     leadership: [
       "How do I handle a conduct issue?",
