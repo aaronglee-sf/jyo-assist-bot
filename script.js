@@ -125,7 +125,7 @@ function buildKnowledgeBaseText(audience) {
 
   Object.values(knowledgeBase.shared).forEach(r => {
     if (r.content) {
-      lines.push(`\n--- ${r.name} ---\n${r.content}\nSource URL: ${r.url}\n`);
+      lines.push(`\n--- ${r.name} ---\n${r.content}\nSource URL: ${r.url || "NONE (cite by name only, no link)"}\n`);
     } else {
       lines.push(`- ${r.name}: ${r.description} | URL: ${r.url}`);
     }
@@ -138,7 +138,7 @@ function buildKnowledgeBaseText(audience) {
       const r = resolveResource(val);
       if (r && typeof r === "object") {
         if (r.content) {
-          lines.push(`\n--- ${r.name} ---\n${r.content}\nSource URL: ${r.url}\n`);
+          lines.push(`\n--- ${r.name} ---\n${r.content}\nSource URL: ${r.url || "NONE (cite by name only, no link)"}\n`);
         } else {
           const urlText = r.url ? r.url : "(URL pending — tell user to check with JYO leadership or visit sanmateojyo.org)";
           lines.push(`- ${r.name}: ${r.description} | URL: ${urlText}`);
@@ -166,6 +166,7 @@ ${kbText}
 2. ALWAYS include a clickable source link at the end of EVERY response, formatted EXACTLY as:
    📄 Source: [Document Name](URL)
    If your answer draws from a named document in the knowledge base, link to it. If multiple documents apply, list all of them. Never omit the source line — even if you're answering from inline content, include the source document name and URL.
+   If a resource's Source URL is NONE, write the source line with the document name only and no link, formatted as: 📄 Source: Document Name. Only use a URL that is listed for that same document (in the knowledge base or Document Registry). NEVER borrow a URL from a different document or from inside another document's text.
 3. If your answer draws from multiple resources, list all relevant source links.
 4. If a resource URL is listed as "(URL pending...)", tell the user the resource exists but the direct link isn't available yet, and suggest they contact JYO leadership or check sanmateojyo.org.
 5. If a question is outside the scope of the knowledge base, respond with:
