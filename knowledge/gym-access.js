@@ -14,11 +14,11 @@ SAN MATEO HIGH SCHOOL GYMS (Hillsdale, Burlingame, Cap, Aragon, Mills)
 
 BREWER GYMS
 - For the 12:30 PM slot: Coach Brian Okita (1st Grade Boys), 650-759-7017, has the key card to get into the gym.
-- For the 4:30 PM slot: Coach Nelson Wong (1st Grade Boys), 415-515-9841, has the key cards to get into the gym.
+- For the 4:30 PM slot: Coach Nelson Wong (1st Grade Boys), 415-515-9841, has the key card to get into the gym.
 
 CROCKER GYMS
-- For 4/5th and 7th Grade Boys Saturday practices: Coach Alan Lee (4/5 Grade Boys coach), 408-348-3564, has the key to unlock the gym.
-- For 3rd Grade Girls practices: Team Manager Lindsey Shintani, 415-793-2426, has the key to unlock the gym.
+- For 4/5th and 7th Grade Boys Saturday practices: Coach Alan Lee (4/5 Grade Boys coach), 408-348-3564, has the key card to unlock the gym.
+- For 3rd Grade Girls practices: Team Manager Lindsey Shintani, 415-793-2426, has the key card to unlock the gym.
 
 KEY CARD AIRTAGS
 - All key cards for Brewer and Crocker gyms should have an Apple AirTag attached, so the key card holder can be located and notified if needed in a gym access emergency.
